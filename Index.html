@@ -1,0 +1,149 @@
+﻿
+<link href="bootstrap.min.css" rel="stylesheet" />
+<link href="style.css" rel="stylesheet" />
+<link href="scan.css" rel="stylesheet" />
+
+<br />
+<br />
+
+<div class="container" style="width:50% ">
+    <div class="input-group" style="height:50px">
+        <input id="scanner_input" class="form-control" placeholder="Press Scan you item" type="text" style="height:50px;font-size: 18px;margin-left: 55px;">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button" data-toggle="modal" data-target="#livestream_scanner" style="height:63px;font-size: 16px;">
+                <i class="fa fa-barcode">SCAN</i>
+            </button>
+        </span>
+    </div>
+</div>
+
+
+
+<modal class="modal" id="livestream_scanner" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content" align="center">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">Barcode Scanner</h4>
+            </div>
+            <div class="modal-body" style="position: static">
+                <div id="interactive" class="viewport" style="height: 30vh;"></div>
+                <div class="error"></div>
+            </div>
+            <div class="modal-footer" style="overflow:hidden">
+                <input id="file" type="file" accept="image/*" class="hidden" style="display:none;">
+
+                <label id="fileSel" for="file" class="btn btn-primary" style="float: left; display: none;">SELECT FILE</label>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" style="float:right;width:45%;">CLOSE</button>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</modal>
+
+<div class="invoice-box" id="invoice-bill" style="display:none">
+    <table class="invoice-boxs" cellpadding="0" cellspacing="0">
+        <tr class="top">
+            <td colspan="2">
+                <table>
+                    <tr>
+                        <td class="title">
+                            <img class="custom-logo" src="https://tutorialshelper.com/wp-content/uploads/2019/10/tutorial-logo.png" style="width:100%; max-width: 181px;">
+                        </td>
+
+                        <td>
+                            <span>Invoice #:</span> <input style="width: 48%;" type="text" disabled name="checkyear" id="invoice-id" value=""><br>
+                            <p>
+                                CreatedDate:
+                                <script>document.write(new Date().toLocaleDateString());</script>
+                            </p>
+                            Due: February 1, 2015
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr class="information">
+            <td colspan="2">
+                <table>
+                    <tr>
+                        <td>
+                            Sparksuite, Inc.<br>
+                            12345 Sunny Road<br>
+                            Sunnyville, CA 12345
+                        </td>
+
+                        <td>
+                            Acme Corp.<br>
+                            John Doe<br>
+                            <a href="https://tutorialshelper.com/">southtechclips@gmail.com</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr class="heading">
+            <td>
+                Payment Method
+            </td>
+
+            <td>
+                Check #
+            </td>
+        </tr>
+
+        <tr class="details">
+            <td>
+                Check
+            </td>
+
+            <td>
+                1000
+            </td>
+        </tr>
+
+        <tr class="heading">
+            <td>
+                Item
+            </td>
+
+            <td>
+                Price
+            </td>
+        </tr>
+
+        <tr class="item">
+            <td>
+                Website design
+            </td>
+
+            <td>
+                $300.00
+            </td>
+        </tr>
+
+        <tr class="total">
+            <td></td>
+
+            <td>
+                Total: $300.00
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script src="jquery.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="jquery.viewportchecker.js"></script>
+<script src="script.js"></script>
+
+
+
+<script src="quagga.min.js"></script>
+<script src="scan.js"></script>
+
+
